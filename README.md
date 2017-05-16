@@ -1,8 +1,8 @@
 # About
-demo_databse is a simple database server (like a key-value storage) for code demonstration purpose: multithread application written in the C-language for Linux OS. Client-server interaction occurs over Unix-socket.
+demo_databse is a simple database server (like a key-value storage) for a code demonstration purpose: multithread application written in the C-language for Linux OS. Client-server interaction occurs over a Unix-socket.
 
 # Common task
-Server performs operations:
+The server performs operations:
  - put <key, value> pair
  - get value by key
  - show list of all values
@@ -10,12 +10,12 @@ Server performs operations:
 
 # Restrictions
  - Key and value length not limited.
- - Values must be deduplicated. If the same value already exsists, then only key must be added to database.
- This way, two different keys must refer to the one value. If one of such keys removing, value still exists with other key,
- - All keys and values must be stored to files on put operation and removed on erase respectively. Lacunes to files must be reused.
+ - Values must be deduplicated. If the same value already exists, then only key must be added to the database.
+ This way, two different keys must refer to the one value. If one of such keys removing, value still exists with other key.
+ - All keys and values must be stored to files on put operation and removed on erase respectively. Lacunes in the files must be reused.
 
 # Implementation
-Server is a multithread application that try to execute incoming requests in parallel mode.
+The server is a multithread application that tries to execute incoming requests in parallel mode.
 For this goal uses data distribution between database nodes.
 The server consists of several nodes (4 for keys and 4 for values). Number of nodes can be changed.
 Sometimes, in the best case, we will have simultaneous write or simultaneous read and write operations.
@@ -49,4 +49,5 @@ $ killall server
   ```
 
 ### Scripts:
-Go to scripts directory and run simultaneously from different consoles _client_w.sh_ and _client_r.sh_ scripts.
+Go to the scripts directory and run simultaneously from different consoles _client_w. sh_ and _client_r. sh_ scripts.
+
