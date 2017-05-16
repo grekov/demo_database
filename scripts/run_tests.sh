@@ -7,16 +7,6 @@ then
         exit 1
 fi
 
-echo "Building tests..."
-
-make
-
-if [[ $? -ne 0 ]]
-then
-        echo "Compile error"
-        exit 1
-fi
-
 total=0
 passed=0
 

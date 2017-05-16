@@ -22,7 +22,7 @@ Sometimes, in the best case, we will have simultaneous write or simultaneous rea
 In common case we have one writer or many readers execution provided by rw_lock semantic.
 
 # Building
-Change dir to src and call make.
+Go to _src_ dir and call make or use cmake in _src/cmake_ directory.
 
 # Running
 ```sh
